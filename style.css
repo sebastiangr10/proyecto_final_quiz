@@ -1,0 +1,109 @@
+body{
+    text-align: center;
+    background:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXWXdG8YKpcvm12j_wxh6JmIWFUykAXHLn1g&usqp=CAU);
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+.container a{
+    text-decoration: none;
+    display:block;
+  
+}
+.container .conceptos{
+    display:block;
+    
+    background-color:darkred;
+    height: 75px;
+    width: 550px;
+    text-decoration: none;
+  border-radius: 5px;
+  font-family: monospace;
+  font-size: 27px;
+  text-align: center;
+  margin: auto;
+  color: white;
+  
+  margin-bottom: 30px;
+}
+.container .cultura{ display:block;
+    ;
+    background-color: darkblue ;
+    height: 75px;
+    width: 550px;
+    text-decoration: none;
+  border-radius: 5px;
+  font-family:monospace;
+  font-size: 27px;
+  text-align: center;
+
+  margin: auto;
+  margin-bottom: 30px;
+  color: white;
+}
+.container .deportes{
+    background-color:darkgreen ;
+    height: 75px;
+    width: 550px;
+    text-decoration: none;
+  border-radius: 5px;
+  font-family:monospace;
+  font-size: 27px;
+  text-align: center;
+ padding: 12px;
+  margin: auto;
+  margin-bottom: 30px;
+  color: white;
+}
+.container .capitales{
+    background-color:darkorange ;
+    height: 75px;
+    width: 550px;
+    text-decoration: none;
+  border-radius: 5px;
+  font-family:monospace;
+  font-size: 27px;
+  text-align: center;
+ padding: 3px;
+  margin: auto;
+  margin-bottom: 30px;
+  color: white;
+}
+.cultura:hover{
+    transform:translateY(2px);
+    background-color: blue;
+}
+.conceptos:hover{
+    transform:translateY(2px);
+    background-color: red;
+}
+.deportes:hover{
+transform:translateY(2px);
+background-color: rgb(12, 182, 12);}
+.capitales:hover{
+    transform:translateY(2px);
+    background-color:orange;
+}
+
+#categorias{
+    margin: auto;
+    position: relative;top: 100px;
+    
+}
+#categorias h1{
+    font-family: fantasy;
+    font-weight: bold;
+    color: black;
+position: relative;bottom: 50px;
+}
+button{
+    width: 150px;
+    height: 40px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(3, 250, 217);
+    font-weight: bold;
+}
+button:hover{
+    background-color: rgb(8, 250, 245);
+}

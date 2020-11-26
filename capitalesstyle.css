@@ -1,0 +1,31 @@
+body{background:url(https://images5.alphacoders.com/456/thumb-1920-456536.jpg);
+ 
+    color: wheat;
+    
+}
+
+ form  {
+     background-color: rgba(69, 71, 73, 0.5);
+     width: 500px;
+     height: 600px;
+    
+ }
+   a {
+    background-color:darkorange ;
+    height: 75px;
+    width: 50px;
+    text-decoration: none;
+  border-radius: 5px;
+  font-family:monospace;
+  font-size: 20px;
+  text-align: center;
+ padding: 12px;
+  margin: auto;
+  margin-bottom: 30px;
+  color: white;
+}
+  
+
+
+  
+     
