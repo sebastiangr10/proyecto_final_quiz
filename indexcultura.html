@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="estilos/culturastyle.css">
+  <link rel="icon" href="img_deportes/quiz.ico.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+ 
+</head>
+</head>
+
+<body>
+  <div id="inicio">
+
+    <input id="nombre" type="text" placeholder="ingresa tu nombre"><br>
+    <button onclick="jugar()">Jugar</button>
+  </div>
+
+
+  <form class="pregunta" name="form" id="form">
+
+    <div id="p1">
+      <h3>¿En que año ocurrió el accidente nuclear de Chernóbil?</h3>
+      <img src="img-cultura/chernobyl.jpg" alt="chernobil" class="centrar">
+
+      <div class="d-grid gap-2 col-10 mx-auto btn-group mt-4" role="group">
+
+        <input type="radio" class="btn-check" name="pregunta1" id="cor1">
+        <label class="btn btn-outline-primary" for="cor1">1986</label>
+
+        <input type="radio" class="btn-check" name="pregunta1" id="in2">
+        <label class="btn btn-outline-primary" for="in1">1984</label>
+
+        <input type="radio" class="btn-check" name="pregunta1" id="cor1">
+        <label class="btn btn-outline-primary" for="in2">1987</label>
+
+        <input type="radio" class="btn-check" name="pregunta1" id="in3">
+        <label class="btn btn-outline-primary" for="in3">1988</label>
+      </div>
+      <button class="next mt-4" type="button" onclick="p2()">
+        Siguiente
+      </button>
+    </div>
+    <div id="p2">
+      <h3>¿A quien se le considera como el autor de la Odisea? </h3>
+      <img src="img-cultura/odisea.jpg" alt="odisea" class="centrar">
+      <div class="d-grid gap-2 col-10 mx-auto btn-group mt-4" role="group">
+
+        <input type="radio" class="btn-check" name="pregunta2" id="in4">
+        <label class="btn btn-outline-primary" for="in4">Miguel de Cervantes</label>
+
+        <input type="radio" class="btn-check" name="pregunta2" id="in5">
+        <label class="btn btn-outline-primary" for="in5">Julio Verne</label>
+
+        <input type="radio" class="btn-check" name="pregunta2" id="cor2">
+        <label class="btn btn-outline-primary" for="cor2">Homero</label>
+
+        <input type="radio" class="btn-check" name="pregunta2" id="in6">
+        <label class="btn btn-outline-primary" for="in6">William Shakespeare</label>
+      </div>
+      <button class="next mt-4" type="button" onclick="p3()">
+        Siguiente
+      </button>
+      <button class="back mt-4" type="button" onclick="p1()">
+        Atras
+      </button>
+    </div>
+    <div id="p3">
+      <h3>¿Cuál es el río más largo del mundo? </h3>
+      <img src="img-cultura/rio.jpg" alt="Rio" class="centrar">
+      <div class="d-grid gap-2 col-10 mx-auto btn-group mt-4" role="group">
+
+        <input type="radio" class="btn-check" name="pregunta3" id="in7">
+        <label class="btn btn-outline-primary" for="in7">Río Nilo</label>
+
+        <input type="radio" class="btn-check" name="pregunta3" id="cor3">
+        <label class="btn btn-outline-primary" for="cor3">Río Amazonas</label>
+
+        <input type="radio" class="btn-check" name="pregunta3" id="in8">
+        <label class="btn btn-outline-primary" for="in8">Río Ganges</label>
+
+        <input type="radio" class="btn-check" name="pregunta3" id="in9">
+        <label class="btn btn-outline-primary" for="in9">Río yangtsé</label>
+      </div>
+      <button class="next mt-4" type="button" onclick="p4()">
+        Siguiente
+      </button>
+      <button class="back mt-4" type="button" onclick="p2()">
+        Atras
+      </button>
+    </div>
+    <div id="p4">
+      <h3>¿En que año fue derribado el muro de Berlín? </h3>
+      <img src="img-cultura/muroberlin.jpg" alt="muro" class="centrar">
+      <div class="d-grid gap-2 col-10 mx-auto btn-group mt-4" role="group">
+
+        <input type="radio" class="btn-check" name="pregunta4" id="in10">
+        <label class="btn btn-outline-primary" for="in10">1988</label>
+
+        <input type="radio" class="btn-check" name="pregunta4" id="cor4">
+        <label class="btn btn-outline-primary" for="cor4">1989</label>
+
+        <input type="radio" class="btn-check" name="pregunta4" id="in11">
+        <label class="btn btn-outline-primary" for="in11">1990</label>
+
+        <input type="radio" class="btn-check" name="pregunta4" id="in12">
+        <label class="btn btn-outline-primary" for="in12">1991</label>
+      </div>
+      <button class="next mt-4" type="button" onclick="p5()">
+        Siguiente
+      </button>
+      <button class="back mt-4" type="button" onclick="p3()">
+        Atras
+      </button>
+    </div>
+    <div id="p5">
+      <h3>¿En que país se encuentra ubicada la torre inclinada de pisa? </h3>
+      <img src="img-cultura/pisa.jpeg" alt="torre pisa" class="centrar">
+      <div class="d-grid gap-2 col-10 mx-auto btn-group mt-4" role="group">
+
+      <input type="radio" class="btn-check" name="pregunta5" id="in13">
+      <label class="btn btn-outline-primary" for="in13">España</label>
+
+      <input type="radio" class="btn-check" name="pregunta5" id="in14">
+      <label class="btn btn-outline-primary" for="in14">Francia</label>
+
+      <input type="radio" class="btn-check" name="pregunta5" id="in15">
+      <label class="btn btn-outline-primary" for="in15">Alemania</label>
+
+      <input type="radio" class="btn-check" name="pregunta5" id="cor5">
+      <label class="btn btn-outline-primary" for="cor5">Italia</label>
+    </div>
+    <button class="next mt-4" type="button" onclick="p6()">
+      Siguiente
+    </button>
+    <button class="back mt-4" type="button" onclick="p4()">
+      Atras
+    </button>
+    </div>
+    <div id="p6">
+      <h3>¿En que año fue descubierta América? </h3>
+      <img src="img-cultura/america.jpg" alt=" Egan bernal" class="centrar">
+      <div class="d-grid gap-2 col-10 mx-auto btn-group mt-4" role="group">
+
+        <input type="radio" class="btn-check" name="pregunta6" id="cor6">
+        <label class="btn btn-outline-primary" for="cor6">1492</label>
+
+        <input type="radio" class="btn-check" name="pregunta6" id="in16">
+        <label class="btn btn-outline-primary" for="in16">1495</label>
+
+        <input type="radio" class="btn-check" name="pregunta6" id="in17">
+        <label class="btn btn-outline-primary" for="in17">1498</label>
+
+        <input type="radio" class="btn-check" name="pregunta6" id="in18">
+        <label class="btn btn-outline-primary" for="in18">1502</label>
+      </div>
+      <button class="next mt-4" type="button" onclick="p7()">
+        Siguiente
+      </button>
+      <button class="back mt-4" type="button" onclick="p5()">
+        Atras
+      </button>
+    </div>
+    <div id="p7">
+      <h3>¿En que país se encuentra el famoso monumento Taj Mahal?</h3>
+      <img src="img-cultura/tajmahal.jpg" alt="taj mahal" class="centrar">
+      <div class="d-grid gap-2 col-10 mx-auto btn-group mt-4" role="group">
+
+        <input type="radio" class="btn-check" name="pregunta7" id="in19">
+        <label class="btn btn-outline-primary" for="in19">China</label>
+
+        <input type="radio" class="btn-check" name="pregunta7" id="in20">
+        <label class="btn btn-outline-primary" for="in20">Japón</label>
+
+        <input type="radio" class="btn-check" name="pregunta7" id="in21">
+        <label class="btn btn-outline-primary" for="in21">Tailandia</label>
+
+        <input type="radio" class="btn-check" name="pregunta7" id="cor7">
+        <label class="btn btn-outline-primary" for="cor7">India</label>
+      </div>
+      <button class="next mt-4" type="button" onclick="p8()">
+        Siguiente
+      </button>
+      <button class="back mt-4" type="button" onclick="p6()">
+        Atras
+      </button>
+    </div>
+    <div id="p8">
+      <h3>¿En que año ocurrió la disolución de la Unión Sovietica? </h3>
+      <img src="img-cultura/sovietica.png" alt="union Sovietica" class="centrar">
+      <div class="d-grid gap-2 col-10 mx-auto btn-group mt-4" role="group">
+
+      <input type="radio" class="btn-check" name="pregunta8" id="cor8">
+      <label class="btn btn-outline-primary" for="cor8">1991</label>
+
+      <input type="radio" class="btn-check" name="pregunta8" id="in22">
+      <label class="btn btn-outline-primary" for="in22">1990</label>
+
+      <input type="radio" class="btn-check" name="pregunta8" id="in23">
+      <label class="btn btn-outline-primary" for="in23">1992</label>
+
+      <input type="radio" class="btn-check" name="pregunta8" id="in24">
+      <label class="btn btn-outline-primary" for="in24">1993</label>
+    </div>
+    <button class="next mt-4" type="button" onclick="p9()">
+      Siguiente
+    </button>
+    <button class="back mt-4" type="button" onclick="p7()">
+      Atras
+    </button>
+    </div>
+    </div>
+    <div id="p9">
+      <h3>¿a que icónica banda de rock perteneció el cantante freddie Mercury? </h3>
+      <img src="img-cultura/freddiemercury.jpg" alt="Freddie Mercury" class="centrar">
+      <div class="d-grid gap-2 col-10 mx-auto btn-group mt-4" role="group">
+
+      <input type="radio" class="btn-check" name="pregunta9" id="in25">
+      <label class="btn btn-outline-primary" for="in25">Led Zeppelin</label>
+
+      <input type="radio" class="btn-check" name="pregunta9" id="cor9">
+      <label class="btn btn-outline-primary" for="cor9">Queen</label>
+
+      <input type="radio" class="btn-check" name="pregunta9" id="in26">
+      <label class="btn btn-outline-primary" for="in26">The Beatles</label>
+
+      <input type="radio" class="btn-check" name="pregunta9" id="in27">
+      <label class="btn btn-outline-primary" for="in27">The Doors</label>
+    </div>
+    <button class="next mt-4" type="button" onclick="p10()">
+      Siguiente
+    </button>
+    <button class="back mt-4" type="button" onclick="p8()">
+      Atras
+    </button>
+    </div>
+
+    </div>
+    <div id="p10">
+      <h3>¿En cuál de los sigientes paises de la actualidad estuvó principalmente ubicado el imperio Inca?
+         </h3>
+        <img src="img-cultura/inca.jpg" alt="imperio inca" class="centrar">
+      <div class="d-grid gap-2 col-10 mx-auto btn-group mt-4" role="group">
+
+        <input type="radio" class="btn-check" name="pregunta10" id="in28">
+        <label class="btn btn-outline-primary" for="in28">México</label>
+
+        <input type="radio" class="btn-check" name="pregunta10" id="in29">
+        <label class="btn btn-outline-primary" for="in29">Bolivia</label>
+
+        <input type="radio" class="btn-check" name="pregunta10" id="in30">
+        <label class="btn btn-outline-primary" for="in30">Nicaragua</label>
+
+        <input type="radio" class="btn-check" name="pregunta10" id="cor10">
+        <label class="btn btn-outline-primary" for="cor10">Perú</label>
+      </div>
+      <button class="next mt-4" type="button" onclick="p11()">
+        Siguiente
+      </button>
+      <button class="back mt-4" type="button" onclick="p9()">
+        Atras
+      </button>
+    </div>
+    </div>
+    <div id="p11">
+      <h3>¿Cuál es el océano más grande del mundo?</h3>
+      <img src="img-cultura/oceano.jpg" alt="océano" class="centrar">
+      <div class="d-grid gap-2 col-10 mx-auto btn-group mt-4" role="group">
+
+        <input type="radio" class="btn-check" name="pregunta11" id="in31">
+        <label class="btn btn-outline-primary" for="cor11">Antártico</label>
+
+        <input type="radio" class="btn-check" name="pregunta11" id="in32">
+        <label class="btn btn-outline-primary" for="in32">Indico</label>
+
+        <input type="radio" class="btn-check" name="pregunta11" id="cor11">
+        <label class="btn btn-outline-primary" for="cor11">Pacífico</label>
+
+        <input type="radio" class="btn-check" name="pregunta11" id="in33">
+        <label class="btn btn-outline-primary" for="in33">Atlántico</label>
+      </div>
+      <button class="next mt-4" type="button" onclick="p12()">
+        Siguiente
+      </button>
+      <button class="back mt-4" type="button" onclick="p10()">
+        Atras
+      </button>
+    </div>
+    <div id="p12">
+      <h3>¿Que civilizavión se considera la primera del mundo?</h3>
+      <img src="img-cultura/civilizaciones.jpg" alt="bateador" class="centrar">
+      <div class="d-grid gap-2 col-10 mx-auto btn-group mt-4" role="group">
+
+        <input type="radio" class="btn-check" name="pregunta12" id="in34">
+        <label class="btn btn-outline-primary" for="in34">Griega</label>
+
+        <input type="radio" class="btn-check" name="pregunta12" id="in35">
+        <label class="btn btn-outline-primary" for="in35">China</label>
+
+        <input type="radio" class="btn-check" name="pregunta12" id="cor12">
+        <label class="btn btn-outline-primary" for="cor12">Sumeria</label>
+
+        <input type="radio" class="btn-check" name="pregunta12" id="in36">
+        <label class="btn btn-outline-primary" for="in36">Egipcia</label>
+      </div>
+      <button class="next mt-4" type="button" onclick="finalizar()">
+        Finalizar
+      </button>
+      <button class="back mt-4" type="button" onclick="p11()">
+        Atras
+      </button>
+    </div>
+    <!--Menu numeros-->
+    <div class="btn-group my-4 centrar1" role="group" aria-label="Basic radio toggle button group">
+
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" onclick="p1()" checked>
+      <label class="btn btn-outline-primary" for="btnradio1">1</label>
+
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" onclick="p2()">
+      <label class="btn btn-outline-primary" for="btnradio2">2</label>
+
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" onclick="p3()">
+      <label class="btn btn-outline-primary" for="btnradio3">3</label>
+
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" onclick="p4()">
+      <label class="btn btn-outline-primary" for="btnradio4">4</label>
+
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off" onclick="p5()">
+      <label class="btn btn-outline-primary" for="btnradio5">5</label>
+
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off" onclick="p6()">
+      <label class="btn btn-outline-primary" for="btnradio6">6</label>
+
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio7" autocomplete="off" onclick="p7()">
+      <label class="btn btn-outline-primary" for="btnradio7">7</label>
+
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio8" autocomplete="off" onclick="p8()">
+      <label class="btn btn-outline-primary" for="btnradio8">8</label>
+
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio9" autocomplete="off" onclick="p9()">
+      <label class="btn btn-outline-primary" for="btnradio9">9</label>
+
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio10" autocomplete="off" onclick="p10()">
+      <label class="btn btn-outline-primary" for="btnradio10">10</label>
+
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio11" autocomplete="off" onclick="p11()">
+      <label class="btn btn-outline-primary" for="btnradio11">11</label>
+
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio12" autocomplete="off" onclick="p12()">
+      <label class="btn btn-outline-primary" for="btnradio12">12</label>
+    </div>
+  </form>
+
+  <!--cuadro puntaje-->
+  <div id="resultados">
+    <h2>Resultados de <span id="name"></span></h2>
+
+    <h3 class="my-4">Tu puntaje es <span id="resultado"></span>/12</h3>
+
+    <h3>Es un desempeño <span id="desemp"></span></h3>
+    <a href="index.html"  class="btn btn-primary">Volver</a>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+  integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+  integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+  crossorigin="anonymous"></script>
+        <script src="js/cultura.js"></script>
+</body>
+</html>

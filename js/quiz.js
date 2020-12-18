@@ -1,5 +1,6 @@
 document.getElementById("categorias").style.display="none"
-
+let nombre;
+nombre=document.getElementById("nombre").value;
 function empezar(){
     document.getElementById("instrucciones").style.display="none"
     document.getElementById("categorias").style.display="block"

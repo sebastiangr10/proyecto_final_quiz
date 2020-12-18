@@ -1,0 +1,107 @@
+
+      
+    body{background:url(https://cdn.pixabay.com/photo/2016/11/29/07/06/bleachers-1867992__340.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
+    }
+    
+    #inicio{
+      margin: auto;
+      margin-top: 200px;
+      border: 2px solid green;
+      width: 300px;
+      height: 200px;
+      background-color: wheat
+    }
+    
+    
+     #inicio input{
+       
+       outline: none;
+       width: 200px;
+       height: 30px;
+       text-align: center;
+       border: 2px solid green;
+      position: relative;left: 55px;
+      margin-top: 30px;
+     
+     }
+    #inicio button{
+      outline: none;
+      width: 180px;
+      height: 50px;
+      text-align: center;
+      background-color: green;
+      padding: 12px;
+      font-size: 18px;
+      font-family: fantasy;
+      color: white;
+      position: relative;left: 60px;
+      margin-top: 50px;
+    }
+     .pregunta{
+     
+      border: 3px solid green;
+      margin: auto;
+      margin-top: 100px;
+      width: 550px;
+      background-color: beige;
+      font-family: sans-serif;
+      font-size: 25px;
+      text-align: left;
+    }
+        .pregunta h3{
+       text-align: center;
+       font-size: 30px;
+       
+      }
+       button{
+        background-color: green;
+        height: 40px;
+        width: 130px;
+        font-size: 20px;
+        outline: none;
+        color: white;
+      }
+      button:hover{
+        background-color: rgb(24, 247, 16);
+      }
+      .centrar{
+        position: relative;
+        left: 18%;
+      }
+      .centrar1{
+        position: relative;
+        left: 12%;
+      }
+      img {
+        width: 350px;
+        height: 150px;
+      }
+      .next {
+        position: relative;
+        left:380px;
+      }
+      .back {
+        position: relative;
+        right: 100px;
+      }
+    #resultados {
+      text-align: center;
+      margin: auto;
+      margin-top: 200px;
+      border: 2px solid green;
+      width: 550px;
+      background-color: wheat
+    }
+    .inicio{
+      background-color:rgb(8, 250, 245) ;
+      font-size: 16px;
+      text-decoration: none;
+      font-family: sans-serif;
+      color: black;
+      width: 500px;
+    }
+    

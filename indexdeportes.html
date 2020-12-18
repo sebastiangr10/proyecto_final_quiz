@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="estilos/deportesstyle.css">
+  <link rel="icon" href="img_deportes/quiz.ico.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  
+</head>
+</head>
+
+<body>
+  <div id="inicio">
+
+    <input id="nombre" type="text" placeholder="ingresa tu nombre"><br>
+    <button onclick="jugar()">Jugar</button>
+  </div>
+
+
+  <form class="pregunta" name="form" id="form">
+
+    <div id="p1">
+      <h3>¿Cuál selección ha ganado más veces el mundial de futbol?</h3>
+      <img src="img_deportes/ganadoresM.jpg" alt="campeones mundial" class="centrar">
+
+      <div class="d-grid gap-2 col-10 mx-auto btn-group mt-4" role="group">
+
+        <input type="radio" class="btn-check" name="pregunta1" id="in1">
+        <label class="btn btn-outline-primary" for="in1">Alemania</label>
+
+        <input type="radio" class="btn-check" name="pregunta1" id="cor1">
+        <label class="btn btn-outline-primary" for="cor1">Brasil</label>
+
+        <input type="radio" class="btn-check" name="pregunta1" id="in2">
+        <label class="btn btn-outline-primary" for="in2">Italia</label>
+
+        <input type="radio" class="btn-check" name="pregunta1" id="in3">
+        <label class="btn btn-outline-primary" for="in3">Argentina</label>
+      </div>
+      <button class="next mt-4" type="button" onclick="p2()">
+        Siguiente
+      </button>
+    </div>
+    <div id="p2">
+      <h3>¿Cuantas medeallas de oro olimpicas ganó el nadador estadounidense Michael Phelps? </h3>
+      <img src="img_deportes/michaelP.jpg" alt="Michael Phelps" class="centrar">
+      <div class="d-grid gap-2 col-10 mx-auto btn-group mt-4" role="group">
+
+        <input type="radio" class="btn-check" name="pregunta2" id="cor2">
+        <label class="btn btn-outline-primary" for="cor2">23</label>
+
+        <input type="radio" class="btn-check" name="pregunta2" id="in4">
+        <label class="btn btn-outline-primary" for="in4">25</label>
+
+        <input type="radio" class="btn-check" name="pregunta2" id="in5">
+        <label class="btn btn-outline-primary" for="in5">22</label>
+
+        <input type="radio" class="btn-check" name="pregunta2" id="in6">
+        <label class="btn btn-outline-primary" for="in6">20</label>
+      </div>
+      <button class="next mt-4" type="button" onclick="p3()">
+        Siguiente
+      </button>
+      <button class="back mt-4" type="button" onclick="p1()">
+        Atras
+      </button>
+    </div>
+    <div id="p3">
+      <h3>¿Quien es este ciclista colombiano? </h3>
+      <img src="img_deportes/rigoberto.jpg" alt="rigoberto" class="centrar">
+      <div class="d-grid gap-2 col-10 mx-auto btn-group mt-4" role="group">
+
+        <input type="radio" class="btn-check" name="pregunta3" id="in7">
+        <label class="btn btn-outline-primary" for="in7">Nairo Quintana</label>
+
+        <input type="radio" class="btn-check" name="pregunta3" id="in8">
+        <label class="btn btn-outline-primary" for="in8">Egan bernal</label>
+
+        <input type="radio" class="btn-check" name="pregunta3" id="in9">
+        <label class="btn btn-outline-primary" for="in9">Esteban chavez</label>
+
+        <input type="radio" class="btn-check" name="pregunta3" id="cor3">
+        <label class="btn btn-outline-primary" for="cor3">Rigoberto Uran</label>
+      </div>
+      <button class="next mt-4" type="button" onclick="p4()">
+        Siguiente
+      </button>
+      <button class="back mt-4" type="button" onclick="p2()">
+        Atras
+      </button>
+    </div>
+    <div id="p4">
+      <h3>¿En que Antigüa ciudad se originaron los juegos olimpicos? </h3>
+      <img src="img_deportes/olimpicos.jpg" alt="olimpicos" class="centrar">
+      <div class="d-grid gap-2 col-10 mx-auto btn-group mt-4" role="group">
+
+        <input type="radio" class="btn-check" name="pregunta4" id="in10">
+        <label class="btn btn-outline-primary" for="in10">Roma</label>
+
+        <input type="radio" class="btn-check" name="pregunta4" id="in11">
+        <label class="btn btn-outline-primary" for="in11">Atenas</label>
+
+        <input type="radio" class="btn-check" name="pregunta4" id="cor4">
+        <label class="btn btn-outline-primary" for="cor4">Olimpia</label>
+
+        <input type="radio" class="btn-check" name="pregunta4" id="in12">
+        <label class="btn btn-outline-primary" for="in12">Constantinopla</label>
+      </div>
+      <button class="next mt-4" type="button" onclick="p5()">
+        Siguiente
+      </button>
+      <button class="back mt-4" type="button" onclick="p3()">
+        Atras
+      </button>
+    </div>
+    <div id="p5">
+      <h3>¿Quien es el máximo goleador en la historia de la selección Colombia? </h3>
+      <img src="img_deportes/colombia.jpg" alt="selección colombia" class="centrar">
+      <div class="d-grid gap-2 col-10 mx-auto btn-group mt-4" role="group">
+
+      <input type="radio" class="btn-check" name="pregunta5" id="in13">
+      <label class="btn btn-outline-primary" for="in13">James Rodríguez</label>
+
+      <input type="radio" class="btn-check" name="pregunta5" id="in14">
+      <label class="btn btn-outline-primary" for="in14">Faustino Asprilla</label>
+
+      <input type="radio" class="btn-check" name="pregunta5" id="in15">
+      <label class="btn btn-outline-primary" for="in15">Arnoldo Iguarán</label>
+
+      <input type="radio" class="btn-check" name="pregunta5" id="cor5">
+      <label class="btn btn-outline-primary" for="cor5">Radamel Falcao García</label>
+    </div>
+    <button class="next mt-4" type="button" onclick="p6()">
+      Siguiente
+    </button>
+    <button class="back mt-4" type="button" onclick="p4()">
+      Atras
+    </button>
+    </div>
+    <div id="p6">
+      <h3>¿En que año ganó Egan Bernal el tour de Francia? </h3>
+      <img src="img_deportes/egan-bernal.jpg" alt=" Egan bernal" class="centrar">
+      <div class="d-grid gap-2 col-10 mx-auto btn-group mt-4" role="group">
+
+        <input type="radio" class="btn-check" name="pregunta6" id="cor6">
+        <label class="btn btn-outline-primary" for="cor6">2019</label>
+
+        <input type="radio" class="btn-check" name="pregunta6" id="in16">
+        <label class="btn btn-outline-primary" for="in16">2018</label>
+
+        <input type="radio" class="btn-check" name="pregunta6" id="in17">
+        <label class="btn btn-outline-primary" for="in17">2017</label>
+
+        <input type="radio" class="btn-check" name="pregunta6" id="in18">
+        <label class="btn btn-outline-primary" for="in18">2016</label>
+      </div>
+      <button class="next mt-4" type="button" onclick="p7()">
+        Siguiente
+      </button>
+      <button class="back mt-4" type="button" onclick="p5()">
+        Atras
+      </button>
+    </div>
+    <div id="p7">
+      <h3>¿Que equipo a ganado más veces la Uefa Champions League?</h3>
+      <img src="img_deportes/champions.jpg" alt="equipos champions" class="centrar">
+      <div class="d-grid gap-2 col-10 mx-auto btn-group mt-4" role="group">
+
+        <input type="radio" class="btn-check" name="pregunta7" id="in19">
+        <label class="btn btn-outline-primary" for="in19">Barcelona</label>
+
+        <input type="radio" class="btn-check" name="pregunta7" id="cor7">
+        <label class="btn btn-outline-primary" for="cor7">Real Madrid</label>
+
+        <input type="radio" class="btn-check" name="pregunta7" id="in20">
+        <label class="btn btn-outline-primary" for="in20">Liverpool</label>
+
+        <input type="radio" class="btn-check" name="pregunta7" id="in21">
+        <label class="btn btn-outline-primary" for="in121">Bayern München</label>
+      </div>
+      <button class="next mt-4" type="button" onclick="p8()">
+        Siguiente
+      </button>
+      <button class="back mt-4" type="button" onclick="p6()">
+        Atras
+      </button>
+    </div>
+    <div id="p8">
+      <h3>¿quien es este tenista? </h3>
+      <img src="img_deportes/federer.jpg" alt="roger federer" class="centrar">
+      <div class="d-grid gap-2 col-10 mx-auto btn-group mt-4" role="group">
+
+      <input type="radio" class="btn-check" name="pregunta8" id="in22">
+      <label class="btn btn-outline-primary" for="in10">Rafael Nadal</label>
+
+      <input type="radio" class="btn-check" name="pregunta8" id="cor8">
+      <label class="btn btn-outline-primary" for="cor8">Roger Federer</label>
+
+      <input type="radio" class="btn-check" name="pregunta8" id="in23">
+      <label class="btn btn-outline-primary" for="in23">Novak Djokovic</label>
+
+      <input type="radio" class="btn-check" name="pregunta8" id="in24">
+      <label class="btn btn-outline-primary" for="in24">Andy Murray</label>
+    </div>
+    <button class="next mt-4" type="button" onclick="p9()">
+      Siguiente
+    </button>
+    <button class="back mt-4" type="button" onclick="p7()">
+      Atras
+    </button>
+    </div>
+    </div>
+    <div id="p9">
+      <h3>¿Quién fue el boxeador más joven de la historia en conseguir un título mundial de los pesos pesados? </h3>
+      <img src="img_deportes/boxeo.jpg" alt="logo boxeo" class="centrar">
+      <div class="d-grid gap-2 col-10 mx-auto btn-group mt-4" role="group">
+
+      <input type="radio" class="btn-check" name="pregunta9" id="in25">
+      <label class="btn btn-outline-primary" for="in25">Floyd Mayweather</label>
+
+      <input type="radio" class="btn-check" name="pregunta9" id="in26">
+      <label class="btn btn-outline-primary" for="in26">Mohamed Ali</label>
+
+      <input type="radio" class="btn-check" name="pregunta9" id="cor9">
+      <label class="btn btn-outline-primary" for="cor9">Mike Tyson</label>
+
+      <input type="radio" class="btn-check" name="pregunta9" id="in27">
+      <label class="btn btn-outline-primary" for="in27">Manny Pacquiao</label>
+    </div>
+    <button class="next mt-4" type="button" onclick="p10()">
+      Siguiente
+    </button>
+    <button class="back mt-4" type="button" onclick="p8()">
+      Atras
+    </button>
+    </div>
+
+    </div>
+    <div id="p10">
+      <h3>¿Quienes fueron los protagonistas del partido de tenis más largo de la historia cuya duración fue de 11 horas
+        y 5 minutos </h3>
+        <img src="img_deportes/tenis.jpg" alt="cancha de tenis" class="centrar">
+      <div class="d-grid gap-2 col-10 mx-auto btn-group mt-4" role="group">
+
+        <input type="radio" class="btn-check" name="pregunta10" id="in28">
+        <label class="btn btn-outline-primary" for="in28">Rafael Nadal y Juan Martín del Potro</label>
+
+        <input type="radio" class="btn-check" name="pregunta10" id="in29">
+        <label class="btn btn-outline-primary" for="in29">Roger Federer y Nicolas Mahut</label>
+
+        <input type="radio" class="btn-check" name="pregunta10" id="in30">
+        <label class="btn btn-outline-primary" for="in30">Rafael Nadal y John Isner</label>
+
+        <input type="radio" class="btn-check" name="pregunta10" id="cor10">
+        <label class="btn btn-outline-primary" for="cor10">Nicolas Mahut y John Isner</label>
+      </div>
+      <button class="next mt-4" type="button" onclick="p11()">
+        Siguiente
+      </button>
+      <button class="back mt-4" type="button" onclick="p9()">
+        Atras
+      </button>
+    </div>
+    </div>
+    <div id="p11">
+      <h3>¿Quien es este exjugador de la NBA?</h3>
+      <img src="img_deportes/oneal.jpg" alt="shaqulle o'neal" class="centrar">
+      <div class="d-grid gap-2 col-10 mx-auto btn-group mt-4" role="group">
+
+        <input type="radio" class="btn-check" name="pregunta11" id="cor11">
+        <label class="btn btn-outline-primary" for="cor11">Shaquille O'neal</label>
+
+        <input type="radio" class="btn-check" name="pregunta11" id="in31">
+        <label class="btn btn-outline-primary" for="in31">Magic Johnson</label>
+
+        <input type="radio" class="btn-check" name="pregunta11" id="in32">
+        <label class="btn btn-outline-primary" for="in32">Michael Jordan</label>
+
+        <input type="radio" class="btn-check" name="pregunta11" id="in33">
+        <label class="btn btn-outline-primary" for="in33">Karl Malone</label>
+      </div>
+      <button class="next mt-4" type="button" onclick="p12()">
+        Siguiente
+      </button>
+      <button class="back mt-4" type="button" onclick="p10()">
+        Atras
+      </button>
+    </div>
+    <div id="p12">
+      <h3>¿Quien es el jugador de las grandes ligas de beisbol con mayor número de home runs en la historia?</h3>
+      <img src="img_deportes/beisbol.jpg" alt="bateador" class="centrar">
+      <div class="d-grid gap-2 col-10 mx-auto btn-group mt-4" role="group">
+
+        <input type="radio" class="btn-check" name="pregunta12" id="in34">
+        <label class="btn btn-outline-primary" for="in34">Sammy Sosa</label>
+
+        <input type="radio" class="btn-check" name="pregunta12" id="in35">
+        <label class="btn btn-outline-primary" for="in35">Willie Mays</label>
+
+        <input type="radio" class="btn-check" name="pregunta12" id="cor12">
+        <label class="btn btn-outline-primary" for="cor12">Barry Bonds</label>
+
+        <input type="radio" class="btn-check" name="pregunta12" id="in36">
+        <label class="btn btn-outline-primary" for="in36">Alex Rodríguez</label>
+      </div>
+      <button class="next mt-4" type="button" onclick="finalizar()">
+        Finalizar
+      </button>
+      <button class="back mt-4" type="button" onclick="p11()">
+        Atras
+      </button>
+    </div>
+    <!--Menu numeros-->
+    <div class="btn-group my-4 centrar1" role="group" aria-label="Basic radio toggle button group">
+
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" onclick="p1()" checked>
+      <label class="btn btn-outline-primary" for="btnradio1">1</label>
+
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" onclick="p2()">
+      <label class="btn btn-outline-primary" for="btnradio2">2</label>
+
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" onclick="p3()">
+      <label class="btn btn-outline-primary" for="btnradio3">3</label>
+
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" onclick="p4()">
+      <label class="btn btn-outline-primary" for="btnradio4">4</label>
+
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off" onclick="p5()">
+      <label class="btn btn-outline-primary" for="btnradio5">5</label>
+
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off" onclick="p6()">
+      <label class="btn btn-outline-primary" for="btnradio6">6</label>
+
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio7" autocomplete="off" onclick="p7()">
+      <label class="btn btn-outline-primary" for="btnradio7">7</label>
+
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio8" autocomplete="off" onclick="p8()">
+      <label class="btn btn-outline-primary" for="btnradio8">8</label>
+
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio9" autocomplete="off" onclick="p9()">
+      <label class="btn btn-outline-primary" for="btnradio9">9</label>
+
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio10" autocomplete="off" onclick="p10()">
+      <label class="btn btn-outline-primary" for="btnradio10">10</label>
+
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio11" autocomplete="off" onclick="p11()">
+      <label class="btn btn-outline-primary" for="btnradio11">11</label>
+
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio12" autocomplete="off" onclick="p12()">
+      <label class="btn btn-outline-primary" for="btnradio12">12</label>
+    </div>
+  </form>
+
+  <!--cuadro puntaje-->
+  <div id="resultados">
+    <h2>Resultados de <span id="name"></span></h2>
+
+    <h3 class="my-4">Tu puntaje es <span id="resultado"></span>/12</h3>
+
+    <h3>Es un desempeño <span id="desemp"></span></h3>
+    <a href="index.html"  class="btn btn-primary">Volver</a>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+  integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+  integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+  crossorigin="anonymous"></script>
+  <script src="js/deportes.js"></script>
+</body>
+
+</html>

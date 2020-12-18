@@ -1,49 +1,426 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="capitalesstyle.css">
+    <title>Quizz app</title>
+
+    <link rel="stylesheet" href="estilos/capitalesstyle.css">
+    <link rel="icon" href="img_deportes/quiz.ico.ico">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container">
-        <header><h1>Quiz App </h1>
-        <h2> capitales del mundo</h2>
-    </header>
-    <div class="preguntas">
-        <form action="">
-        
-        <h3>1. ¿cuál es la capital de Italia?</h3>
-        
-        <input type= "radio" name="p1" value="a">a. Milán <br>
-        <input type= "radio" name="p1" value="b">b. Florencia <br>
-        <input type= "radio" name="p1" value="c">c. Roma <br>
-        <input type= "radio" name="p1" value="d">d. Nápoles<br>
-        
-        <h3>2. ¿cuál es la capital de España?</h3>
-        <input type= "radio" name="p2" value="a">a. Barcelona <br>
-        <input type= "radio" name="p2" value="b">b. Madrid <br>
-        <input type= "radio" name="p2" value="c">c. Valencia <br>
-        <input type= "radio" name="p2" value="d">d. Sevilla<br>
-
-        <h3>3. ¿cuál es la capital de Canadá?</h3>
-        <input type= "radio" name="p3" value="a">a. Toronto <br>
-        <input type= "radio" name="p3" value="b">b. Vancouver <br>
-        <input type= "radio" name="p3" value="c">c. Montreal<br>
-        <input type= "radio" name="p3" value="d">d. Ottawa<br>
-        <h3>4. ¿cuál es la capital de Japón?</h3>
-        <input type= "radio" name="p4" value="a">a. Tokio <br>
-        <input type= "radio" name="p4" value="b">b. Yokohama <br>
-        <input type= "radio" name="p4" value="c">c. Osaka <br>
-        <input type= "radio" name="p4" value="d">d. Kioto<br>
-       
-    </form>
-    <a href="index.html" class=finalizar>finalizar</a>
-
+    <div id="inicio" >
+        <input id="nombre" type="text" placeholder="ingresa tu nombre"><br>
+        <button onclick="jugar()">Jugar</button>
     </div>
-  
-    </div>
+
+    <form class="pregunta" name="form" id="form">
+
+        <!--Pregunta 1-->
+        <div id="p1">
+            <h3>¿ Cuál es la capital de Italia ?</h3>
+
+            <img src="img_banderas/Italia.png" alt="Bandera de Italia" class="centrar">
+
+            <div class="d-grid gap-2 col-10 mx-auto btn-group mt-4" role="group">
+
+                <input type="radio" class="btn-check" name="pregunta1" id="in1">
+                <label class="btn btn-outline-primary" for="in1">Milán</label>
+
+                <input type="radio" class="btn-check" name="pregunta1" id="in2">
+                <label class="btn btn-outline-primary" for="in2">Nápoles</label>
+
+                <input type="radio" class="btn-check" name="pregunta1" id="cor1">
+                <label class="btn btn-outline-primary" for="cor1">Roma</label>
+
+                <input type="radio" class="btn-check" name="pregunta1" id="in3">
+                <label class="btn btn-outline-primary" for="in3">Florencia</label>
+            </div>
+            <!--Boton siguiente-->
+            <button class="next mt-4" type="button" onclick="p2()">
+                Siguiente
+            </button>
+        </div>
+
+        <!--Pregunta 2-->
+        <div id="p2">
+            <h3>¿ Cuál es la capital de Japón?</h3>
+
+            <img src="img_banderas/Japón.png" alt="Bandera de japón" class="centrar">
+
+            <div class="d-grid gap-2 col-10 mx-auto btn-group mt-4" role="group">
+
+                <input type="radio" class="btn-check" name="pregunta2" id="in4">
+                <label class="btn btn-outline-primary" for="in4">Yokohama</label>
+
+                <input type="radio" class="btn-check" name="pregunta2" id="cor2">
+                <label class="btn btn-outline-primary" for="cor2">Tokio</label>
+
+                <input type="radio" class="btn-check" name="pregunta2" id="in5">
+                <label class="btn btn-outline-primary" for="in5">Kioto</label>
+
+                <input type="radio" class="btn-check" name="pregunta2" id="in6">
+                <label class="btn btn-outline-primary" for="in6">Osaka</label>
+            </div>
+
+            <!--Boton siguiente-->
+            <button class="next mt-4" type="button" onclick="p3()">
+                Siguiente
+            </button>
+            <button class="back mt-4" type="button" onclick="p1()">
+                Atras
+            </button>
+        </div>
+
+        <!--Pregunta 3-->
+        <div id="p3">
+            <h3>¿ Cuál es la capital de Estados Unidos ?</h3>
+
+            <img src="img_banderas/EEUU.png" alt="Bandera de USA" class="centrar">
+
+            <div class="d-grid gap-2 col-10 mx-auto btn-group mt-4" role="group">
+
+                <input type="radio" class="btn-check" name="pregunta3" id="cor3">
+                <label class="btn btn-outline-primary" for="cor3">Washington</label>
+
+                <input type="radio" class="btn-check" name="pregunta3" id="in7">
+                <label class="btn btn-outline-primary" for="in7">Nueva York</label>
+
+                <input type="radio" class="btn-check" name="pregunta3" id="in8">
+                <label class="btn btn-outline-primary" for="in8">Los Angeles</label>
+
+                <input type="radio" class="btn-check" name="pregunta3" id="in9">
+                <label class="btn btn-outline-primary" for="in9">Chicago</label>
+            </div>
+
+            <!--Boton siguiente-->
+            <button class="next mt-4" type="button" onclick="p4()">
+                Siguiente
+            </button>
+            <button class="back mt-4" type="button" onclick="p2()">
+                Atras
+            </button>
+        </div>
+
+        <!--Pregunta 4-->
+        <div id="p4">
+            <h3>¿ Cuál es la capital de Canada ?</h3>
+
+            <img src="img_banderas/Canada.png" alt="Bandera de Canada" class="centrar">
+
+            <div class="d-grid gap-2 col-10 mx-auto btn-group mt-4" role="group">
+
+                <input type="radio" class="btn-check" name="pregunta4" id="in10">
+                <label class="btn btn-outline-primary" for="in10">Montreal</label>
+
+                <input type="radio" class="btn-check" name="pregunta4" id="in11">
+                <label class="btn btn-outline-primary" for="in11">Toronto</label>
+
+                <input type="radio" class="btn-check" name="pregunta4" id="in12">
+                <label class="btn btn-outline-primary" for="in12">Vancouver</label>
+
+                <input type="radio" class="btn-check" name="pregunta4" id="cor4">
+                <label class="btn btn-outline-primary" for="cor4">Ottawa</label>
+            </div>
+
+            <!--Boton siguiente-->
+            <button class="next mt-4" type="button" onclick="p5()">
+                Siguiente
+            </button>
+            <button class="back mt-4" type="button" onclick="p3()">
+                Atras
+            </button>
+        </div>
+
+        <!--Pregunta 5-->
+        <div id="p5">
+            <h3>¿ Cuál es la capital de China ?</h3>
+
+            <img src="img_banderas/China.png" alt="Bandera de China" class="centrar">
+
+            <div class="d-grid gap-2 col-10 mx-auto btn-group mt-4" role="group">
+
+                <input type="radio" class="btn-check" name="pregunta5" id="in13">
+                <label class="btn btn-outline-primary" for="in13">Shangái</label>
+
+                <input type="radio" class="btn-check" name="pregunta5" id="in14">
+                <label class="btn btn-outline-primary" for="in14">Beijing</label>
+
+                <input type="radio" class="btn-check" name="pregunta5" id="cor5">
+                <label class="btn btn-outline-primary" for="cor5">Pekín</label>
+
+                <input type="radio" class="btn-check" name="pregunta5" id="in15">
+                <label class="btn btn-outline-primary" for="in15">Hong Kong</label>
+            </div>
+
+            <!--Boton siguiente-->
+            <button class="next mt-4" type="button" onclick="p6()">
+                Siguiente
+            </button>
+            <button class="back mt-4" type="button" onclick="p4()">
+                Atras
+            </button>
+        </div>
+
+        <!--Pregunta 6-->
+        <div id="p6">
+            <h3>¿ Cuál es la capital de México ?</h3>
+
+            <img src="img_banderas/México.png" alt="Bandera de México" class="centrar">
+
+            <div class="d-grid gap-2 col-10 mx-auto btn-group mt-4" role="group">
+
+                <input type="radio" class="btn-check" name="pregunta6" id="in16">
+                <label class="btn btn-outline-primary" for="in16">Guadalajara</label>
+
+                <input type="radio" class="btn-check" name="pregunta6" id="cor6">
+                <label class="btn btn-outline-primary" for="cor6">Ciudad de México</label>
+
+                <input type="radio" class="btn-check" name="pregunta6" id="in17">
+                <label class="btn btn-outline-primary" for="in17">Monterrey</label>
+
+                <input type="radio" class="btn-check" name="pregunta6" id="in18">
+                <label class="btn btn-outline-primary" for="in18">Tijuana</label>
+            </div>
+
+            <!--Boton siguiente-->
+            <button class="next mt-4" type="button" onclick="p7()">
+                Siguiente
+            </button>
+            <button class="back mt-4" type="button" onclick="p5()">
+                Atras
+            </button>
+        </div>
+
+        <!--Pregunta 7-->
+        <div id="p7">
+            <h3>¿ Cuál es la capital de Inglaterra ?</h3>
+
+            <img src="img_banderas/inglaterra.png" alt="Bandera de Inglaterra" class="centrar">
+
+            <div class="d-grid gap-2 col-10 mx-auto btn-group mt-4" role="group">
+
+                <input type="radio" class="btn-check" name="pregunta7" id="cor7">
+                <label class="btn btn-outline-primary" for="cor7">Londrés</label>
+
+                <input type="radio" class="btn-check" name="pregunta7" id="in19">
+                <label class="btn btn-outline-primary" for="in19">Manchester</label>
+
+                <input type="radio" class="btn-check" name="pregunta7" id="in20">
+                <label class="btn btn-outline-primary" for="in20">Liverpool</label>
+
+                <input type="radio" class="btn-check" name="pregunta7" id="in21">
+                <label class="btn btn-outline-primary" for="in21">Birmingham</label>
+            </div>
+
+            <!--Boton siguiente-->
+            <button class="next mt-4" type="button" onclick="p8()">
+                Siguiente
+            </button>
+            <button class="back mt-4" type="button" onclick="p6()">
+                Atras
+            </button>
+        </div>
+
+        <!--Pregunta 8-->
+        <div id="p8">
+            <h3>¿ Cuál es la capital de Brasil ?</h3>
     
+            <img src="img_banderas/Brasil.png" alt="Bandera de Brasil" class="centrar">
+    
+            <div class="d-grid gap-2 col-10 mx-auto btn-group mt-4" role="group">
+    
+                <input type="radio" class="btn-check" name="pregunta8" id="in22">
+                <label class="btn btn-outline-primary" for="in22">Rio de Janeiro</label>
+    
+                <input type="radio" class="btn-check" name="pregunta8" id="in23">
+                <label class="btn btn-outline-primary" for="in23">Sao Paulo</label>
+    
+                <input type="radio" class="btn-check" name="pregunta8" id="cor8">
+                <label class="btn btn-outline-primary" for="cor8">Brasilia</label>
+    
+                <input type="radio" class="btn-check" name="pregunta8" id="in24">
+                <label class="btn btn-outline-primary" for="in24">Porto Alegre</label>
+            </div>
+    
+            <!--Boton siguiente-->
+            <button class="next mt-4" type="button" onclick="p9()">
+                Siguiente
+            </button>
+            <button class="back mt-4" type="button" onclick="p7()">
+                Atras
+            </button>
+        </div>
+
+        <!--Pregunta 9-->
+        <div id="p9">
+            <h3>¿ Cuál es la capital de Egipto ?</h3>
+    
+            <img src="img_banderas/Egipto.png" alt="Bandera de Egipto" class="centrar">
+    
+            <div class="d-grid gap-2 col-10 mx-auto btn-group mt-4" role="group">
+    
+                <input type="radio" class="btn-check" name="pregunta9" id="in25">
+                <label class="btn btn-outline-primary" for="in25">Alejandría</label>
+    
+                <input type="radio" class="btn-check" name="pregunta9" id="in26">
+                <label class="btn btn-outline-primary" for="in26">Guiza</label>
+    
+                <input type="radio" class="btn-check" name="pregunta9" id="in27">
+                <label class="btn btn-outline-primary" for="in27">Puerto Saíd</label>
+    
+                <input type="radio" class="btn-check" name="pregunta9" id="cor9">
+                <label class="btn btn-outline-primary" for="cor9">El Cairo</label>
+            </div>
+    
+            <!--Boton siguiente-->
+            <button class="next mt-4" type="button" onclick="p10()">
+                Siguiente
+            </button>
+            <button class="back mt-4" type="button" onclick="p8()">
+                Atras
+            </button>
+        </div>
+
+        <!--Pregunta 10-->
+        <div id="p10">
+            <h3>¿ Cuál es la capital de Suiza ?</h3>
+    
+            <img src="img_banderas/Suiza.png" alt="Bandera de Suiza" class="centrar">
+    
+            <div class="d-grid gap-2 col-10 mx-auto btn-group mt-4" role="group">
+    
+                <input type="radio" class="btn-check" name="pregunta10" id="in28">
+                <label class="btn btn-outline-primary" for="in28">Basilea</label>
+    
+                <input type="radio" class="btn-check" name="pregunta10" id="cor10">
+                <label class="btn btn-outline-primary" for="cor10">Berna</label>
+    
+                <input type="radio" class="btn-check" name="pregunta10" id="in29">
+                <label class="btn btn-outline-primary" for="in29">Zúrich</label>
+    
+                <input type="radio" class="btn-check" name="pregunta10" id="in30">
+                <label class="btn btn-outline-primary" for="in30">Ginebra</label>
+            </div>
+    
+            <!--Boton siguiente-->
+            <button class="next mt-4" type="button" onclick="p11()">
+                Siguiente
+            </button>
+            <button class="back mt-4" type="button" onclick="p9()">
+                Atras
+            </button>
+        </div>
+
+        <div id="p11">
+          <h3>¿ Cuál es la capital de Turquía ?</h3>
+
+          <img src="img_banderas/Turquía.png" alt="Bandera de Turquía" class="centrar">
+
+          <div class="d-grid gap-2 col-10 mx-auto btn-group mt-4" role="group">
+
+              <input type="radio" class="btn-check" name="pregunta11" id="cor11">
+              <label class="btn btn-outline-primary" for="cor11">Ankara</label>
+
+              <input type="radio" class="btn-check" name="pregunta11" id="in31">
+              <label class="btn btn-outline-primary" for="in31">Estambul</label>
+
+              <input type="radio" class="btn-check" name="pregunta11" id="in32">
+              <label class="btn btn-outline-primary" for="in32">Esmirna</label>
+
+              <input type="radio" class="btn-check" name="pregunta11" id="in33">
+              <label class="btn btn-outline-primary" for="in33">Antalya</label>
+          </div>
+          <button class="next mt-4" type="button" onclick="p12()">
+            Siguiente
+        </button>
+        <button class="back mt-4" type="button" onclick="p10()">
+            Atras
+        </button>
+    </div>
+    <div id="p12">
+      <h3>¿ Cuál es la capital de Australia ?</h3>
+
+      <img src="img_banderas/Australia.png" alt="Bandera de Australia" class="centrar">
+
+      <div class="d-grid gap-2 col-10 mx-auto btn-group mt-4" role="group">
+
+          <input type="radio" class="btn-check" name="pregunta12" id="in34">
+          <label class="btn btn-outline-primary" for="in34">Sidney</label>
+
+          <input type="radio" class="btn-check" name="pregunta12" id="in35">
+          <label class="btn btn-outline-primary" for="in35">Melbourne</label>
+
+          <input type="radio" class="btn-check" name="pregunta12" id="in36">
+          <label class="btn btn-outline-primary" for="in36">Perth</label>
+
+          <input type="radio" class="btn-check" name="pregunta12" id="cor12">
+          <label class="btn btn-outline-primary" for="cor12">Camberra</label>
+      </div>
+      <button class="next mt-4" type="button" onclick="finalizar()">
+        Finalizar
+    </button>
+    <button class="back mt-4" type="button" onclick="p11()">
+        Atras
+    </button>
+</div>
+
+        <!--Menu numeros-->
+        <div class="btn-group my-4 centrar1" role="group" aria-label="Basic radio toggle button group">
+
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" onclick="p1()" checked>
+            <label class="btn btn-outline-primary" for="btnradio1">1</label>
+          
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" onclick="p2()">
+            <label class="btn btn-outline-primary" for="btnradio2">2</label>
+          
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" onclick="p3()">
+            <label class="btn btn-outline-primary" for="btnradio3">3</label>
+        
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" onclick="p4()">
+            <label class="btn btn-outline-primary" for="btnradio4">4</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off" onclick="p5()">
+            <label class="btn btn-outline-primary" for="btnradio5">5</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off" onclick="p6()">
+            <label class="btn btn-outline-primary" for="btnradio6">6</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio7" autocomplete="off" onclick="p7()">
+            <label class="btn btn-outline-primary" for="btnradio7">7</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio8" autocomplete="off" onclick="p8()">
+            <label class="btn btn-outline-primary" for="btnradio8">8</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio9" autocomplete="off" onclick="p9()">
+            <label class="btn btn-outline-primary" for="btnradio9">9</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio10" autocomplete="off" onclick="p10()">
+            <label class="btn btn-outline-primary" for="btnradio10">10</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio11" autocomplete="off" onclick="p11()">
+            <label class="btn btn-outline-primary" for="btnradio11">11</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio12" autocomplete="off" onclick="p12()">
+            <label class="btn btn-outline-primary" for="btnradio12">12</label>
+        </div>
+    </form>
+
+    <!--cuadro puntaje-->
+    <div id="resultados">
+        <h2>Resultados de <span id="name"></span></h2>
+
+        <h3 class="my-4">Tu puntaje es <span id="resultado"></span>/12</h3>
+
+        <h3>Es un desempeño <span id="desemp"></span></h3>
+    
+        <a href="index.html"  class="btn btn-primary">Volver</a>
+    </div>
 </body>
+<script src="js/capitales.js"></script>
 </html>

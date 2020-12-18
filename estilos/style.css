@@ -1,10 +1,20 @@
+
 body{
     text-align: center;
-    background:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXWXdG8YKpcvm12j_wxh6JmIWFUykAXHLn1g&usqp=CAU);
+    background:url(https://blog.stockcrowd.com/hubfs/Header%20blog%20preguntas.png);
     background-repeat: no-repeat;
     background-size: cover;
-   
+    background-position: center center;
+    background-attachment: fixed;
 }
+#nombre{
+    position: relative;top: 40px;
+    outline: none;
+    margin: auto;
+    border: 1px solid rgb(5, 221, 236);
+    border-radius: 8px;
+}
+  
 .container a{
     text-decoration: none;
     display:block;
@@ -86,24 +96,34 @@ background-color: rgb(12, 182, 12);}
 }
 
 #categorias{
-    margin: auto;
-    position: relative;top: 100px;
-    
+    background-color: wheat;
+    border: 2px solid orange;
+    border-radius: 25px;
 }
 #categorias h1{
     font-family: fantasy;
     font-weight: bold;
     color: black;
-position: relative;bottom: 50px;
 }
-button{
+.btn-primary{
     width: 150px;
-    height: 40px;
     font-size: 20px;
     font-family: 'Courier New', Courier, monospace;
-    background-color: rgb(3, 250, 217);
+    background-color: rgb(3, 250, 217) !important;
     font-weight: bold;
+    border: 1px solid rgb(0, 151, 126) !important;
+    color: rgb(32, 32, 32);
 }
-button:hover{
-    background-color: rgb(8, 250, 245);
+.btn-primary:hover{
+    background-color: rgb(8, 250, 245) !important;
+    border: 1px solid rgb(0, 151, 126) !important;
+    color: rgb(32, 32, 32);
+}
+#instrucciones {
+    position: absolute;
+    top: 25%;
+    left: 33%;
+    background-color: wheat;
+    border: 2px solid orange;
+    border-radius: 25px;
 }
